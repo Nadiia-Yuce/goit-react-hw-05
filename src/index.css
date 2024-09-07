@@ -1,4 +1,19 @@
-/* @import "@fontsource/montserrat"; */
 body {
-  background-color: rgb(87, 87, 87);
+  /* max-width: 1440px; */
+  padding: 16px;
+  /* margin: 0 auto; */
+  background-color: rgb(50, 49, 49);
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
 }

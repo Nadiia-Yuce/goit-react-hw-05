@@ -1,6 +1,21 @@
 .navigation {
 }
 
+.link {
+  color: rgb(146, 146, 146);
+  font-size: 32px;
+  transition: font-size 250ms ease;
+}
+
+.link:first-child {
+  margin-right: 18px;
+}
+
+.link:hover,
+.link:focus {
+  font-size: 34px;
+}
+
 .active {
-  color: rgb(252, 101, 14);
+  color: #4fa94d;
 }

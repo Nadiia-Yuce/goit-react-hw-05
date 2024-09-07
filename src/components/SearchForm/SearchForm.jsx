@@ -1,9 +1,6 @@
 import toast, { Toaster } from "react-hot-toast";
-import { useSearchParams } from "react-router-dom";
 
-export default function SearchForm() {
-  const [searchParams, setSearchParams] = useSearchParams();
-
+export default function SearchForm({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
     const query = e.target.elements.query.value.trim();
@@ -16,17 +13,7 @@ export default function SearchForm() {
 
       return;
     }
-
-    // setSearchParams({
-    //   query,
-    //   page: 1,
-    // });
-
-    searchParams.set("query", query);
-    setSearchParams(searchParams);
-
-    // searchParams.set("page", 1);
-    // setSearchParams(searchParams);
+    onSubmit(query);
   };
 
   return (
