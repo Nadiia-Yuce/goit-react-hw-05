@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "../../TMBD-API";
 import { FallingLines } from "react-loader-spinner";
+import { getMovies } from "../../TMBD-API";
 import MovieList from "../../components/MovieList/MovieList";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 

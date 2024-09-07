@@ -42,23 +42,25 @@ export default function MovieDetailsPage() {
   return (
     <div>
       <Link to={backLink.current}>Go back</Link>
-      {loading && <FallingLines />}
-      {error && <ErrorMessage />}
-      {movie !== null && <MovieInfo movie={movie} />}
+      <div>
+        {loading && <FallingLines />}
+        {error && <ErrorMessage />}
+        {movie !== null && <MovieInfo movie={movie} />}
 
-      {!loading && (
-        <div>
-          <p>Additional information:</p>
-          <ul>
-            <li>
-              <NavLink to="cast">Cast</NavLink>
-            </li>
-            <li>
-              <NavLink to="reviews">Reviews</NavLink>
-            </li>
-          </ul>
-        </div>
-      )}
+        {!loading && movie !== null && (
+          <div>
+            <p>Additional information:</p>
+            <ul>
+              <li>
+                <NavLink to="cast">Cast</NavLink>
+              </li>
+              <li>
+                <NavLink to="reviews">Reviews</NavLink>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
 
       <Suspense fallback={<FallingLines />}>
         <Outlet />

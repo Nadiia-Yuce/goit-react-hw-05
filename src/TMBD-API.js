@@ -36,9 +36,9 @@ export const getMovieReviews = async movieId => {
   return response.data.results;
 };
 
-export const getMoviesByQuery = async query => {
+export const getMoviesByQuery = async (query, page = 1) => {
   const response = await axios.get(
-    `/search/movie?query=${query}&page=1`,
+    `/search/movie?query=${query}&page=${page}`,
     options
   );
 
