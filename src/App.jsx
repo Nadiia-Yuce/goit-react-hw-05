@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { FallingLines } from "react-loader-spinner";
 import Navigation from "./components/Navigation/Navigation";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -20,7 +21,7 @@ export default function App() {
     <div>
       <Navigation />
 
-      <Suspense fallback={<div>Loading page ...</div>}>
+      <Suspense fallback={<FallingLines />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
