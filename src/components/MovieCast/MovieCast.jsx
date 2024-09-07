@@ -33,7 +33,7 @@ export default function MovieCast() {
     <div>
       {loading && <FallingLines />}
       {error && <ErrorMessage />}
-      {movieCast.length > 0 ? (
+      {movieCast.length > 0 && !loading ? (
         <ul>
           {movieCast.map(cast => (
             <li key={cast.id}>
