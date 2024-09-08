@@ -1,21 +1,21 @@
-.navigation {
+.header {
+  width: 100vw;
+  background-color: rgba(146, 146, 146, 0.7);
+  padding: 8px 16px;
+  box-shadow: 0px 14px 14px 1px rgba(0, 0, 0, 0.75);
 }
 
 .link {
-  color: rgb(146, 146, 146);
+  color: rgb(83, 82, 82);
   font-size: 32px;
-  transition: font-size 250ms ease;
+  transition: text-shadow 250ms ease;
 }
 
 .link:first-child {
   margin-right: 18px;
 }
 
-.link:hover,
-.link:focus {
-  font-size: 34px;
-}
-
 .active {
-  color: #4fa94d;
+  color: #419540;
+  text-shadow: 2px 2px 0px #085f18, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }

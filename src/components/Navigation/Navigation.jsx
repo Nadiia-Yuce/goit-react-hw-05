@@ -8,8 +8,8 @@ export default function Navigation() {
   };
 
   return (
-    <div>
-      <nav className={css.navigation}>
+    <header className={css.header}>
+      <nav>
         <NavLink to="/" className={getActiveClass}>
           Home
         </NavLink>
@@ -17,6 +17,6 @@ export default function Navigation() {
           Movies
         </NavLink>
       </nav>
-    </div>
+    </header>
   );
 }
