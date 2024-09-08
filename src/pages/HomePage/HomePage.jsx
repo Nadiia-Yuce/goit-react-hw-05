@@ -28,15 +28,9 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className={css.container}>
+    <div>
       <h1 className={css.title}>Trending today</h1>
-      {loading ? (
-        <div className={css.loader}>
-          <FallingLines color="#419540" />
-        </div>
-      ) : (
-        <></>
-      )}
+      {loading && <FallingLines color="#419540" />}
       {error && <ErrorMessage />}
       {movies.length > 0 && <MovieList movies={movies} />}
     </div>

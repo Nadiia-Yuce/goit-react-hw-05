@@ -1,14 +1,5 @@
 .title {
   color: rgb(110, 109, 109);
   text-shadow: #000000 3px 5px 2px;
-  text-align: center;
-}
-
-.container {
-  text-align: center;
-}
-
-.loader {
-  height: 100px;
-  text-align: center;
+  margin: 20px 0;
 }

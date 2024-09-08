@@ -1,0 +1,17 @@
+.poster {
+  height: 450px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.subtitle {
+  height: 80px;
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(146, 146, 146, 0.7);
+  color: rgb(83, 82, 82);
+}

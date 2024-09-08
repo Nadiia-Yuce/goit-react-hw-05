@@ -3,6 +3,7 @@
   background-color: rgba(146, 146, 146, 0.7);
   padding: 8px 16px;
   box-shadow: 0px 14px 14px 1px rgba(0, 0, 0, 0.75);
+  text-align: start;
 }
 
 .link {
@@ -12,7 +13,7 @@
 }
 
 .link:first-child {
-  margin-right: 18px;
+  margin-right: 32px;
 }
 
 .active {
