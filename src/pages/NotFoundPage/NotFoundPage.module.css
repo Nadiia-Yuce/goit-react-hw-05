@@ -1,0 +1,29 @@
+.title {
+  color: rgb(110, 109, 109);
+  text-shadow: #000000 3px 5px 2px;
+  margin: 20px 0;
+}
+
+.back {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 120px;
+  padding: 8px 16px;
+
+  font-size: 18px;
+  color: rgb(83, 82, 82);
+  background-color: rgba(146, 146, 146, 0.7);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms ease, color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.back:hover,
+.back:focus {
+  color: rgb(50, 49, 49);
+  background-color: #419540;
+  box-shadow: 9px 10px 8px -6px rgba(0, 0, 0, 0.75);
+}
