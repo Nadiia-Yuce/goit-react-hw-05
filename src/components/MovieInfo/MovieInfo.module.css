@@ -1,5 +1,33 @@
 .detailsContainer {
   display: flex;
   gap: 30px;
-  margin-top: 30px;
+}
+
+.infoPoster {
+  height: 450px;
+  width: 300px;
+  border-radius: 4px;
+}
+
+.infoTitle {
+  color: rgb(110, 109, 109);
+  text-shadow: #000000 3px 5px 2px;
+  font-size: 28px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.infoItem {
+  color: rgb(110, 109, 109);
+  font-size: 20px;
+  text-align: left;
+  max-width: 900px;
+}
+
+.infoItem:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.accent {
+  color: rgb(153, 151, 151);
 }

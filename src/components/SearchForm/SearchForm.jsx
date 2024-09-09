@@ -1,4 +1,5 @@
 import toast, { Toaster } from "react-hot-toast";
+import css from "./SearchForm.module.css";
 
 export default function SearchForm({ onSubmit }) {
   const handleSubmit = e => {
@@ -17,11 +18,19 @@ export default function SearchForm({ onSubmit }) {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <Toaster position="top-right" />
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="query" autoFocus placeholder="Search movies" />
-        <button type="submit">Search</button>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <input
+          className={css.input}
+          type="text"
+          name="query"
+          autoFocus
+          placeholder="Search movies"
+        />
+        <button className={css.formBtn} type="submit">
+          Search
+        </button>
       </form>
     </div>
   );

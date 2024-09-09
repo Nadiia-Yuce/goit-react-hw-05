@@ -9,8 +9,9 @@ import {
 import { FallingLines } from "react-loader-spinner";
 import { getMoviesById } from "../../TMBD-API";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-// import css from "./MovieDetailsPage.module.css";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
+import css from "./MovieDetailsPage.module.css";
+import clsx from "clsx";
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -39,9 +40,15 @@ export default function MovieDetailsPage() {
     fetchData();
   }, [movieId]);
 
+  const getActiveClass = ({ isActive }) => {
+    return clsx(css.link, isActive && css.active);
+  };
+
   return (
-    <div>
-      <Link to={backLink.current}>Go back</Link>
+    <div className={css.container}>
+      <div className={css.back}>
+        <Link to={backLink.current}>Go back</Link>
+      </div>
       <div>
         {loading && <FallingLines />}
         {error && <ErrorMessage />}
@@ -49,13 +56,17 @@ export default function MovieDetailsPage() {
 
         {!loading && movie !== null && (
           <div>
-            <p>Additional information:</p>
-            <ul>
+            <p className={css.additional}>Additional information:</p>
+            <ul className={css.outletList}>
               <li>
-                <NavLink to="cast">Cast</NavLink>
+                <NavLink to="cast" className={getActiveClass}>
+                  Cast
+                </NavLink>
               </li>
               <li>
-                <NavLink to="reviews">Reviews</NavLink>
+                <NavLink to="reviews" className={getActiveClass}>
+                  Reviews
+                </NavLink>
               </li>
             </ul>
           </div>

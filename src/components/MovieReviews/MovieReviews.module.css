@@ -1,0 +1,35 @@
+.noReview {
+  color: rgb(110, 109, 109);
+  text-shadow: #000000 3px 5px 2px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.reviewItem {
+}
+
+.mainReviewInfo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 16px;
+
+  color: rgb(153, 151, 151);
+}
+
+.reviewImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.list {
+  text-align: left;
+}
+
+.review {
+  text-align: left;
+  margin-bottom: 16px;
+  color: rgb(110, 109, 109);
+}

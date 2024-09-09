@@ -1,0 +1,38 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.castItem {
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.castImg {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sublist {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  color: rgb(50, 49, 49);
+  background-color: rgb(105, 105, 105);
+}
+
+.noCast {
+  color: rgb(110, 109, 109);
+  text-shadow: #000000 3px 5px 2px;
+  font-size: 20px;
+  text-align: left;
+}

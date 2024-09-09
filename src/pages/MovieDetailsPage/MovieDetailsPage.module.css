@@ -1,1 +1,49 @@
+.container {
+  padding: 0 16px;
+}
 
+.back {
+  width: 120px;
+  display: block;
+  padding: 8px 16px;
+  margin: 30px 0;
+
+  font-size: 18px;
+  color: rgb(83, 82, 82);
+  background-color: rgba(146, 146, 146, 0.7);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms ease, color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.back:hover,
+.back:focus {
+  color: rgb(50, 49, 49);
+  background-color: #419540;
+  box-shadow: 9px 10px 8px -6px rgba(0, 0, 0, 0.75);
+}
+
+.additional {
+  color: rgb(153, 151, 151);
+  font-size: 20px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.outletList {
+  display: flex;
+  gap: 30px;
+  margin: 8px 0 16px 16px;
+}
+
+.link {
+  color: rgb(83, 82, 82);
+  font-size: 22px;
+  transition: text-shadow 250ms ease;
+}
+
+.active {
+  color: #419540;
+  text-shadow: 2px 2px 0px #085f18, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}

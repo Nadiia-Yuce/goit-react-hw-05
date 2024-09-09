@@ -6,6 +6,7 @@ import SearchForm from "../../components/SearchForm/SearchForm";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import MovieList from "../../components/MovieList/MovieList";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
+import css from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
@@ -56,7 +57,9 @@ export default function MoviesPage() {
       {movies.length > 0 && <MovieList movies={movies} />}
       {!loading && movies.length > 0 && <LoadMoreBtn onLoad={handleLoadMore} />}
       {loading && <FallingLines />}
-      {page >= totalPages && <p>End of the collection!!</p>}
+      {page >= totalPages && !loading && !error && (
+        <p className={css.end}>End of the collection!!</p>
+      )}
     </div>
   );
 }
